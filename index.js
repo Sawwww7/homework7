@@ -1,10 +1,4 @@
-const reverseArray = (orArray) => {
-  let reversedArr = [];
-  for (let i = orArray.length - 1; 0 <= i; i--) {
-    reversedArr.push(orArray[i]);
-  }
-  return reversedArr;
-};
+const reverseArray =(array)=>array.reverse() 
 
 const originalArray = [1, 2, 3, 4, 5];
 const reversedArray = reverseArray(originalArray);
@@ -25,12 +19,11 @@ console.log(uniqueValuesArray); // [1, 2, 3, 4, 5, 6, 7]
 //////////////////////////////////////////////
 
 const calculateAverageGrade = (stud) => {
-  let totalScore = 0;
-  for (let i = 0; i < stud.length; i = i + 1) {
-    console.log(stud[i].grade);
-    totalScore = totalScore + stud.at(i).grade / stud.length;
-  }
-  return totalScore.toFixed(2);
+  let initialValue = 0
+  let sum = stud.reduce((accumulator, currentValue) => accumulator + currentValue.grade,
+  initialValue,
+);
+return(sum/stud.length).toFixed(2)
 };
 
 const students = [
@@ -39,7 +32,7 @@ const students = [
   { name: "Charlie", age: 19, grade: 4.8 },
 ];
 
-console.log(calculateAverageGrade(students)); // 4.4
+console.log(calculateAverageGrade(students)); // 4.40
 
 //Створіть функцію reverseArray, яка приймає масив і повертає новий масив, елементи якого розташовані у зворотному порядку.
 //Створіть функцію uniqueValues, яка приймає два масиви і повертає новий масив, що містить тільки унікальні значення з обох масивів (без дублікатів).
