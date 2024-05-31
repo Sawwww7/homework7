@@ -1,8 +1,17 @@
-const reverseArray =(array)=>array.reverse() 
+const reverseArray =(array)=>array.map(el => el).reverse()
+
 
 const originalArray = [1, 2, 3, 4, 5];
 const reversedArray = reverseArray(originalArray);
 console.log(reversedArray); // [5, 4, 3, 2, 1]
+
+
+const reverseArray3 =(array)=>array.filter(el => el).reverse()
+
+
+const originalArray3 = [1, 2, 3, 4, 5];
+const reversedArray3 = reverseArray(originalArray3);
+console.log(reversedArray3); // [5, 4, 3, 2, 1]
 
 
 const reverseArray2 =(array)=>array.slice()
